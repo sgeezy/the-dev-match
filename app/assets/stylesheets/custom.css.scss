@@ -11,7 +11,15 @@ body {
   background:      -o-linear-gradient(90deg, #780206 10%, #061161 90%); /* Opera 11.10+ */
   background:         linear-gradient(90deg, #780206 10%, #061161 90%); /* W3C */
       
-//   color: white;  
+  color: white;  
+}
+
+.well {
+    color: #404040;
+}
+
+.jumbotron {
+    color: #404040;
 }
 
 .free {
