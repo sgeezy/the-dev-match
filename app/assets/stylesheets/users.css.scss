@@ -1,3 +1,9 @@
+// Users show page styles
+.user-show-avatar {
+    height: 128px;
+    width: 128px;
+}
+
 .job_title_icon {
     width: 30px;
     height: 30px;
@@ -6,6 +12,7 @@
     border-radius: 4px;
     background-color: 337ab7;
     text-align: center;
+    margin-right: 10px;
 }
 
 .col-md-3.text-center.profile-avatar img {
@@ -30,4 +37,13 @@
 .well.contact-info {
     background-color: #5cb85c;
     border-color: #4cae4c;
+}
+
+// Users index page styles
+.well.white-bg {
+    background-color: white;
+}
+
+.user-index-avatar {
+    border-radius: 50%;
 }
