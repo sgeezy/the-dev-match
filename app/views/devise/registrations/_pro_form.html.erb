@@ -5,7 +5,7 @@
         
         <div class="field form-group">
           <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'e.g. tbrady@deflatedeeznutz.com' %>
+          <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'Insert Email Address' %>
         </div>
         
         <div class="field form-group">
@@ -13,12 +13,12 @@
           <% if @validatable %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'e.g. Password12345' %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Choose Password' %>
         </div>
         
         <div class="field form-group">
           <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'e.g. Password12345' %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Reenter Password' %>
         </div>
         
         <div class="form-group">
