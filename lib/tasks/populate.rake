@@ -4,12 +4,12 @@ namespace :db do
 
     task :populate => :environment do
 
-        3.times do |n|
+        10.times do |n|
             time = Faker::Time.between(2.days.ago, Date.today, :all) #=> "2014-09-19 07:03:30 -0700"
             firstname = Faker::Name.first_name
             lastname =  Faker::Name.last_name
             email = "#{firstname}.#{lastname}#{n+1}@example.com"
-            jobs = ['entrepreneur','developer', 'investor']
+            jobs = ['Entrepreneur','Developer', 'Investor']
             job_title = jobs[rand(3)]
             phone = Faker::PhoneNumber.cell_phone
             description = Faker::Hipster.paragraph(2) #=> "Yolo tilde farm-to-table hashtag. Lomo kitsch disrupt forage +1."
@@ -18,7 +18,7 @@ namespace :db do
             password:  "password",
             created_at: time,
             updated_at: time,
-            plan_id: "2")
+            plan_id: "#{rand(1..2)}")
           profile = Profile.create!(
             user_id: user.id,
             first_name: firstname,
@@ -30,6 +30,8 @@ namespace :db do
             created_at: time,
             updated_at: time
             )
+          profile.avatar = URI.parse("http://pipsum.com/300x300.jpg")
+          profile.save
         end
     end
     
