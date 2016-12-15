@@ -4,11 +4,13 @@ namespace :db do
 
     task :populate => :environment do
 
-        10.times do |n|
+        5.times do |n|
             time = Faker::Time.between(2.days.ago, Date.today, :all) #=> "2014-09-19 07:03:30 -0700"
             firstname = Faker::Name.first_name
             lastname =  Faker::Name.last_name
-            email = "#{firstname}.#{lastname}#{n+1}@example.com"
+            fakeemail = Faker::Internet.email("#{firstname}.#{lastname}#{n+1}") #=> "nancy@terry.biz"
+            email = fakeemail
+            # email = "#{firstname}.#{lastname}#{n+1}@example.com"
             jobs = ['Entrepreneur','Developer', 'Investor']
             job_title = jobs[rand(3)]
             phone = Faker::PhoneNumber.cell_phone
