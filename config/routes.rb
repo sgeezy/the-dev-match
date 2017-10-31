@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  # devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: { :omniauth_callbacks => "callbacks" }
   resources :users do
     resource :profile
   end
   
-  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  # match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   # match 'auth/:provider/callback', to: 'sessions#create'
   resources :contacts
   get '/about' => 'pages#about'
