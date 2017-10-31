@@ -51,6 +51,8 @@ gem 'paperclip', '4.2.1'
 
 gem 'faker', '1.6.6'
 
+gem 'omniauth-twitter'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

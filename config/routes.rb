@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :users do
     resource :profile
   end
+  
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  # match 'auth/:provider/callback', to: 'sessions#create'
   resources :contacts
   get '/about' => 'pages#about'
   get '/contact' => 'pages#contact'
