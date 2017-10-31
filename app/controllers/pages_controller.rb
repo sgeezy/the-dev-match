@@ -13,4 +13,10 @@ class PagesController < ApplicationController
     def packages
     end
     
+    def privacy
+    end
+    
+    def tos
+    end
+    
 end

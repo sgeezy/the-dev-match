@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # match 'auth/:provider/callback', to: 'sessions#create'
   resources :contacts
   get '/about' => 'pages#about'
+  get '/privacy' => 'pages#privacy'
+  get '/tos' => 'pages#tos'
   get '/contact' => 'pages#contact'
   root 'pages#home'
   
